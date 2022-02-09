@@ -59,5 +59,25 @@ cricket is one of the best game in the world.</p>
         <td>6000</td>
     </tr>
 </table>
+<h3>Numerical Methods</h3>
+<blockquote>Searching Algorithms are designed to check for an element or retrieve an element from any data structure where it is stored.
+</blockquote>
+<a href="https://www.geeksforgeeks.org/searching-algorithms/">Link for Numerical Methods</a>
+<pre>
+double ternary_search(double l, double r) {
+    double eps = 1e-9;              //set the error limit here
+    while (r - l > eps) {
+        double m1 = l + (r - l) / 3;
+        double m2 = r - (r - l) / 3;
+        double f1 = f(m1);      //evaluates the function at m1
+        double f2 = f(m2);      //evaluates the function at m2
+        if (f1 < f2)
+            l = m1;
+        else
+            r = m2;
+    }
+    return f(l);                    //return the maximum of f(x) in [l, r]
+}
+</pre>
 </body>
 </html>
